@@ -62,8 +62,8 @@ The following fields must be used to describe each dataset if they are applicabl
 {: .table .table-striped}
 Field               | Definition                                                                                                                                     |JSON
 -------             | ---------------                                                                                                                                | --------------  
-Bureau Code			| Federal agencies, combined agency and bureau code from [OMB Circular A-11, Appendix C](http://www.whitehouse.gov/sites/default/files/omb/assets/a11_current_year/app_c.pdf) in the format of `015:11`.  | bureauCode
-Program Code		| Federal agencies, list the primary program related to this data asset, from the [Federal Program Inventory](http://goals.performance.gov/sites/default/files/images/FederalProgramInventory_FY13_MachineReadable_091613.xls). Use the format of `015:001`  | programCode
+Bureau Code			| Federal agencies, combined agency and bureau code from [OMB Circular A-11, Appendix C](http://www.whitehouse.gov/sites/default/files/omb/assets/a11_current_year/app_c.pdf) ([csv](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/bureau_codes_2013.csv), [json](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/bureau_codes_2013.json)) in the format of `015:11`.  | bureauCode
+Program Code		| Federal agencies, list the primary program related to this data asset, from the [Federal Program Inventory](http://goals.performance.gov/sites/default/files/images/FederalProgramInventory_FY13_MachineReadable_091613.xls) ([csv](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/program_codes_2013.csv), [json](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/program_codes_2013.json)). Use the format of `015:001`  | programCode
 Access Level Comment | An explanation for the selected “accessLevel” including instructions for how to access a restricted file, if applicable, or explanation for why a “non-public” or “restricted public” data asset is not “public,” if applicable. Text, 255 characters.  | accessLevelComment
 Download URL        | URL providing direct access to the downloadable distribution of a dataset.                                                                     | accessURL
 Endpoint            | Endpoint of web service to access dataset.                                                                                                     | webService
@@ -141,7 +141,7 @@ Further Metadata Field Guidance (alphabetical by JSON field)
 **Cardinality** | (0,n)
 **Required** | Yes, for United States Federal Government agencies
 **Accepted Values** | Array of Strings
-**Usage Notes** | Represent each bureau responsible for the dataset according to the codes found in [OMB Circular A-11, Appendix C](http://www.whitehouse.gov/sites/default/files/omb/assets/a11_current_year/app_c.pdf). Start with the agency code, then a colon, then the bureau code.
+**Usage Notes** | Represent each bureau responsible for the dataset according to the codes found in [OMB Circular A-11, Appendix C](http://www.whitehouse.gov/sites/default/files/omb/assets/a11_current_year/app_c.pdf) ([csv](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/bureau_codes_2013.csv), [json](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/bureau_codes_2013.json)). Start with the agency code, then a colon, then the bureau code.
 **Example** |  The Office of the Solicitor (86) at the Department of the Interior (010) would be: {"bureauCode":["010:86"]}
 
 {: .table .table-striped}
@@ -308,7 +308,7 @@ Further Metadata Field Guidance (alphabetical by JSON field)
 **Cardinality** | (0,n)
 **Required** | Yes, for United States Federal Government Agencies
 **Accepted Values** | Array of strings
-**Usage Notes** | Provide an array of programs related to this data asset, from the [Federal Program Inventory](http://goals.performance.gov/sites/default/files/images/FederalProgramInventory_FY13_MachineReadable_091613.xls).
+**Usage Notes** | Provide an array of programs related to this data asset, from the [Federal Program Inventory](http://goals.performance.gov/sites/default/files/images/FederalProgramInventory_FY13_MachineReadable_091613.xls) ([csv](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/program_codes_2013.csv), [json](https://github.com/project-open-data/project-open-data.github.io/blob/master/assets/docs/program_codes_2013.json)).
 **Example** |  `{"programCode":["015:001”, “015:002”]}`
 
 {: .table .table-striped}
